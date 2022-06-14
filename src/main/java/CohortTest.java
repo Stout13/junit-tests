@@ -4,12 +4,15 @@
 public class CohortTest{
     public static void main(String[] args) {
     }
+    @Before
     private List<Student> students = new ArrayList<>();
     }
 //            same as Cohort.java
+    @Before
     public CohortTest() {
         this.students = new ArrayList<>();
     }
+    @Before
     public double getCohortAverage() {
         double avg = 0;
         for (Student student: this.getStudents()) {
