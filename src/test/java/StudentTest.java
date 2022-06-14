@@ -5,15 +5,14 @@ import java.util.ArrayList;
 import static org.junit.Assert.*;
 
 public class StudentTest {
-    @Test
+    @Before
     public void testCreateStudent(){
         Student fer = new Student(1L, "fer");
         Student ryan = null;
         assertNull(ryan);
         assertNotNull(fer);
     }
-
-    @Test
+    @Before
     public void testStudentFields(){
         Student fer = new Student(1L, "fer");
         assertSame(1L, fer.getId());
@@ -22,7 +21,7 @@ public class StudentTest {
     }
 
 
-    @Test
+    @Before
     public void testAddGrade(){
         Student fer = new Student(1L, "fer");
         fer.addGrade(100);
@@ -31,7 +30,7 @@ public class StudentTest {
         assertSame(80, fer.getGrades().get(1));
     }
 
-    @Test
+    @Before
     public void testAverageGrade(){
         Student fer = new Student(1L, "fer");
         fer.addGrade(100);
